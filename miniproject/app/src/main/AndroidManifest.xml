@@ -11,18 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Miniproject">
+
+        <!-- Màn hình đăng ký -->
         <activity
             android:name=".Signup"
             android:exported="false" />
+
+        <!-- Màn hình profile (mới thêm) -->
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+
+        <!-- Màn hình chính (có icon khởi chạy app) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

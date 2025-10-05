@@ -3,6 +3,8 @@ package com.example.miniproject;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -10,7 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView tv;
+    Button btnSG;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +24,18 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button btnSignUp = findViewById(R.id.button2);
-        btnSignUp.setOnClickListener(v -> {
+        tv = findViewById(R.id.textView1);
+        tv.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, Signup.class);
             startActivity(intent);
         });
+
+        btnSG = findViewById(R.id.button);
+        btnSG.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Profile.class);
+            startActivity(intent);
+        });
+
 
     }
 }
